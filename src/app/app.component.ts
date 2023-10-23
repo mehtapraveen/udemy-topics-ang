@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showOdd= false
   title = 'ang-udemy';
+
+  numbers=[1,2,3,4,5];
+  oddNumbers=[1,3,5]
+  evenNumbers=[2,4]
+  value = 5
+ 
 }
