@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <input type="text" [(ngModel)]="test">
+            <hr>
+            <!-- <h2>serverstatus:{{asyncdata | async}}</h2> -->
+            <h2>test:{{new |async}}</h2>
+            <button type="button" (click)="addserver()">addserver</button>
+            <hr>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let server of servers | filter:test:'status' | sort:'name'"
+                    [ngClass]="getStatusClasses(server)">
+                    <span class="badge">
+                        {{server.status}}
+                    </span>
+                    <strong>{{server.name | shorten:11 |uppercase}}</strong>| {{server.instanceType | uppercase |
+                    reverse}} |
+                    {{server.started | date:'fullDate' | uppercase}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
