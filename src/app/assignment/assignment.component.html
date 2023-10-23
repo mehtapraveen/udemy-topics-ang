@@ -1,0 +1,41 @@
+<!-- question:
+1.add a button which says 'displaydetails'
+2.add a paragraph with any content of your choice(eg:'secretpassword=tuna')
+3.toggle the displaying of that paragraph with button created in the first step
+4.log all button clicks in an array and output that array below the secret paragraph
+(maybe log a timestamp or simply an incrementing number)
+5.starting at the sth log item, give all the future log items a blue background
+(via ngstyle) and white color via(ng class) -->
+<!--------------------------------------assignmentsolution--------------->
+<!-- <button class="btn btn-primary" (click)="showToggle =!showToggle">display details</button> -->
+<!-- <button class="btn btn-primary" (click)="showdetails()">display details</button>
+
+<p *ngIf="showToggle">secret password =tuna</p>
+<p *ngFor="let x of log; let i = index" [ngStyle]="{backgroundColor:i >=5 ?'blue':'transparent'}"
+    [ngClass]="{'white-text':i >=5}"> -->
+<!-------------------------------------------------------->
+<!-- 
+question:
+1.add a input field which updates a property('username') via two way binding
+2.output the username property via string interpolation
+3.add a button which may only be  clicked if the username is not an empty string
+4.upon clicking the button, the username should be reset to an empty string -->
+<!-- <label>UserName</label>
+  <input type="text" [(ngModel)]="test">
+  {{test}}
+  <button [disabled]="test === ''" (click)="test = ''" class="btn btn-primary">reset</button> -->
+<!------------------------------------------------------------->>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>servers</h2>
+            <button class="btn btn-primary" (click)="onAddserver()">add server</button>
+            <br><br>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let server of servers;let i = index" (click)="removeserver(i)">
+                    {{server}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

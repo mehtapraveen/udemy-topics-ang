@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1">
+            <button class="btn btn-primary" type="button" (click)="emitdata()">Emitdata</button>
+            <button class="btn btn-secondary" type="button" #btnref (click)="getdata()">Getdata</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <ul class="list-group" *ngFor="let data of Data">
+            <li class="list-group-item">
+                {{data}}
+            </li>
+        </ul>
+    </div>
+</div>
